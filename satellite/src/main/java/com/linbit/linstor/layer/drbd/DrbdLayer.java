@@ -702,7 +702,7 @@ public class DrbdLayer implements DeviceLayer
                                 drbdVlmData,
                                 // TODO: not sure if we should "--assume-clean" if data device is only partially
                                 // thinly backed
-                                VolumeUtils.isVolumeThinlyBacked(drbdVlmData, false),
+                                VolumeUtils.isVolumeThinlyBacked(drbdVlmData, false) || VolumeUtils.isVolumeZfs(drbdVlmData, false),
                                 null
                             );
                         }
